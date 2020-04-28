@@ -1,3 +1,3 @@
-import "./common.css";
+import './common.css';
 
-console.log("common js here");
+console.log('page scripts');

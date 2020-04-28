@@ -5,7 +5,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-form {
+.share-form {
   margin: 1em auto;
   width: 50%;
   min-width: 400px;
@@ -13,12 +13,12 @@ form {
   border-radius: 8px;
 }
 
-form section.form-section {
+.share-form__section {
   background: #f8f8f7;
   padding: 32px 50px;
 }
 
-form section.form-footer {
+.share-form__footer {
   background: white;
   padding: 32px 50px;
   border-radius: 0 0 8px 8px;
@@ -35,22 +35,22 @@ form section.form-footer {
   overflow-y: auto;
 }
 
-.miro-emails * {
+.miro-emails__value, .miro-emails__input {
   display: inline-flex;
   font-size: 14px;
 }
 
-.miro-emails input {
+.miro-emails__input {
   outline: none;
   border: 0;
 }
 
-.miro-emails span {
+.miro-emails__value {
   margin: 2px 8px 2px 0;
   pointer-events: none;
 }
 
-.miro-emails span:after {
+.miro-emails__value:after {
   content: ' ';
   background-image: url(https://whowcms-digital-agency.s3-eu-west-1.amazonaws.com/whoassembly2019/images/icon-close-512.png);
   background-size: 10px 10px;
@@ -63,18 +63,18 @@ form section.form-footer {
   pointer-events: all;
 }
 
-.miro-emails span.miro-emails-item-valid {
+.miro-emails__value_valid {
   background: rgba(102, 153, 255, 0.2);
   border-radius: 100px;
   padding: 2px 5px 2px 8px;
 }
 
-.miro-emails span.miro-emails-item-invalid {
+.miro-emails__value_invalid {
   border-bottom: 1px dashed #D92929;
   padding: 2px 0;
 }
 
-form h1 {
+.share-form__title {
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -82,7 +82,7 @@ form h1 {
   margin-bottom: 24px;
 }
 
-form button {
+.share-form__button {
   background: #4262FF;
   border-radius: 6px;
   color: #fff;
@@ -96,6 +96,6 @@ form button {
   margin-right: 8px;
 }
 
-form button:hover {
+.share-form__button:hover {
   background-color: #455bed;
 }
