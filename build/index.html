@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Miro project</title>
+        <meta charset="utf-8">
+        <script src="common.js"></script>
+        <script src="emails.js"></script>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <!-- First form -->
+        <form class="share-form">
+            <section class="share-form__section">
+                <h1 class="share-form__title">Share <strong>Board name</strong> with others</h1>
+                <div id="emails-input"></div>
+            </section>
+            <section class="share-form__footer">
+                <button class="share-form__button" type="button" id="add-email">Add email</button>
+                <button class="share-form__button" type="button" id="get-emails-count">Get emails count</button>
+            </section>
+        </form>
+        <script type="text/javascript">
+            const emailsInput = EmailsInput.create({
+                target: document.querySelector('#emails-input')
+            });
+
+            document.querySelector('#add-email').onclick = () => {
+                emailsInput.insertRandomEmail();
+            }
+
+            document.querySelector('#get-emails-count').onclick = () => {
+                emailsInput.sayMeEmailsCount();
+            }
+
+            let alertChanges = function (newValues) {
+                console.log('alertChanges', newValues)
+            }
+
+            emailsInput.registerObserver(alertChanges);
+        </script>
+
+        <!-- Second form -->
+        <form class="share-form">
+            <section class="share-form__section">
+                <h1 class="share-form__title">Yet another <strong>Board name</strong> sharing</h1>
+                <div id="emails-input2"></div>
+            </section>
+            <section class="share-form__footer">
+                <button class="share-form__button" type="button" id="add-email2">Add email</button>
+                <button class="share-form__button" type="button" id="get-emails-count2">Get emails count</button>
+            </section>
+        </form>
+        <script type="text/javascript">
+            const emailsInput2 = EmailsInput.create({
+                target: document.querySelector('#emails-input2')
+            });
+
+            document.querySelector('#add-email2').onclick = () => {
+                emailsInput2.insertRandomEmail();
+            }
+
+            document.querySelector('#get-emails-count2').onclick = () => {
+                emailsInput2.sayMeEmailsCount();
+            }
+        </script>
+    </body>
+</html>

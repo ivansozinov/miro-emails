@@ -8,11 +8,11 @@
   "license": "ISC",
   "homepage": "https://ivansozinov.github.io/miro-emails",
   "scripts": {
-    "clean": "rm dist/bundle.js",
+    "clean": "rm build/bundle.js",
     "build-dev": "webpack -d --mode development --watch",
     "start": "webpack-dev-server --open",
     "build-prod": "webpack -p --mode production",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build-prod",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {

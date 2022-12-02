@@ -8,7 +8,7 @@ const config = {
     emails: './src/components/emails/index.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
     library: ["EmailsInput"],
     libraryTarget: "var"
@@ -28,7 +28,7 @@ const config = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '/dist/',
+              publicPath: '/build/',
               hmr: process.env.NODE_ENV === 'development',
               reloadAll: true,
             },
@@ -44,7 +44,7 @@ const config = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'build'),
     compress: true,
     port: 9000
   }
